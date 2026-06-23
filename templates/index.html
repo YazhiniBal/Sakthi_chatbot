@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sakthi Sugars Chatbot</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="main">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <h2>🤖 AI Chat</h2>
+
+        <button class="new-chat"
+                onclick="clearChat()">
+            + New Chat
+        </button>
+
+        <div class="history">
+
+            <div class="chat-item">
+                What is ERP?
+            </div>
+
+            <div class="chat-item">
+                Sakthi Sugars
+            </div>
+
+            <div class="chat-item">
+                Contact Details
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Chat Area -->
+    <div class="container">
+
+        <div class="header">
+            🤖 Sakthi Sugars Chatbot
+        </div>
+
+
+        <div id="chat">
+
+            <div class="bot">
+                👋 Welcome! Ask me anything about Sakthi Sugars.
+            </div>
+
+        </div>
+
+
+        <div class="input-area">
+
+            <input
+                    type="text"
+                    id="question"
+                    placeholder="Type your question..."
+                    onkeypress="handleKey(event)"
+            >
+
+            <button onclick="askBot()">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
